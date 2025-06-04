@@ -10,9 +10,9 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "baseUrl": ".",                     // จุดเริ่มต้นการ resolve path (root folder)
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"]                  // alias @ = ./src
+      "@/*": ["src/*"]
     }
   },
   "include": ["src/**/*.ts"],

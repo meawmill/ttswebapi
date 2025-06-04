@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {    
-    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
-    "start": "node dist/server.js",
+  "_moduleAliases": {
+    "@": "src"
+  },
+  "scripts": {
+    "dev": "ts-node-dev --respawn --transpile-only -r tsconfig-paths/register src/server.ts",
+    "start": "node -r module-alias/register dist/server.js",
     "start:dev": "cross-env NODE_ENV=development node dist/server.js",
     "start:prod": "cross-env NODE_ENV=production node dist/server.js",
     "build": "tsc",
@@ -14,20 +17,20 @@
     "clean": "rimraf dist",
     "rebuild": "pnpm clean && pnpm build",
     "rebuild:dev": "pnpm clean && pnpm build:dev",
-    "rebuild:prod": "pnpm clean && pnpm build:prod",
-    "test": "echo \"No tests yet. Maybe later 😉\" && exit 1"
+    "rebuild:prod": "pnpm clean && pnpm build:prod"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "packageManager": "pnpm@10.4.1",
-  "dependencies": {
+    "dependencies": {
     "bcryptjs": "^3.0.2",
     "dotenv": "^16.5.0",
     "dotenv-flow": "^4.1.0",
     "express": "^5.1.0",
     "jsonwebtoken": "^9.0.2",
     "lodash": "^4.17.21",
+    "module-alias": "^2.2.3",
     "pg": "^8.16.0"
   },
   "devDependencies": {
@@ -38,6 +41,7 @@
     "@types/pg": "^8.15.2",
     "nodemon": "^3.1.10",
     "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
     "typescript": "^5.8.3"
   }
 }
