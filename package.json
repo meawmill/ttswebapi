@@ -1,0 +1,43 @@
+{
+  "name": "ttswebapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {    
+    "dev": "ts-node-dev --respawn --transpile-only src/server.ts",
+    "start": "node dist/server.js",
+    "start:dev": "cross-env NODE_ENV=development node dist/server.js",
+    "start:prod": "cross-env NODE_ENV=production node dist/server.js",
+    "build": "tsc",
+    "build:dev": "cross-env NODE_ENV=development tsc",
+    "build:prod": "cross-env NODE_ENV=production tsc",
+    "clean": "rimraf dist",
+    "rebuild": "pnpm clean && pnpm build",
+    "rebuild:dev": "pnpm clean && pnpm build:dev",
+    "rebuild:prod": "pnpm clean && pnpm build:prod",
+    "test": "echo \"No tests yet. Maybe later 😉\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.4.1",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "dotenv": "^16.5.0",
+    "dotenv-flow": "^4.1.0",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "pg": "^8.16.0"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/lodash": "^4.17.17",
+    "@types/node": "^22.15.29",
+    "@types/pg": "^8.15.2",
+    "nodemon": "^3.1.10",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}
