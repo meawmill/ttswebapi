@@ -1,8 +1,8 @@
 import express from "express";
 import dotenvFlow from "dotenv-flow";
-import { customCors } from "./modules/main/middleware/cors";
+import { customCors } from "./modules/shared/middleware/cors";
 
-import authRoutes from "@/modules/main/auth/auth.routes";
+import authRoutes from "@/modules/shared/auth/auth.routes";
 // import saleCheckQRCode from "@/modules/SaleChkQR/routes/saleCheckQRCode";
 
 dotenvFlow.config();

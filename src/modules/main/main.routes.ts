@@ -4,8 +4,8 @@ import {
   getMe,
   login,
   register,
-} from "@/modules/main/auth/auth.controller";
-import { verifyToken } from "@/modules/main/auth/auth.middleware";
+} from "@/modules/shared/auth/auth.controller";
+import { verifyToken } from "@/modules/shared/auth/auth.middleware";
 
 const router = express.Router();
 

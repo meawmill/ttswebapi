@@ -1,6 +1,6 @@
 import express from "express";
-import { getMe } from "@/modules/main/auth/auth.controller";
-import { verifyToken } from "@/modules/main/auth/auth.middleware";
+import { getMe } from "@/modules/shared/auth/auth.controller";
+import { verifyToken } from "@/modules/shared/auth/auth.middleware";
 
 const router = express.Router();
 

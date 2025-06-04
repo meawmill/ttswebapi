@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import { omit, pick } from "lodash";
 import jwt from "jsonwebtoken";
-import { query, queryHRM } from "@/modules/main/db/query";
+import { query, queryHRM } from "@/modules/shared/db/query";
 import bcrypt from "bcryptjs";
 import { Result } from "pg";
 import dotenvFlow from "dotenv-flow";
